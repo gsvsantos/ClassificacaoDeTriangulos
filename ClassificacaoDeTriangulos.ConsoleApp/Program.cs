@@ -24,6 +24,13 @@
                 Console.WriteLine($"Lado Z: {sideZ}");
                 Console.WriteLine("\n/-----------------------------------------\\");
 
+                bool isAValidTriangle = sideX + sideY > sideZ && sideX + sideZ > sideY && sideY + sideZ > sideX;
+
+                if (isAValidTriangle == true)
+                    Console.WriteLine("\nÉ um triângulo válido.");
+                else
+                    Console.WriteLine("\nOs valores informados não formam um triâgulo válido");
+
                 Console.Write("\nDeseja continuar? (S/N) ");
                 string optionContinue = Console.ReadLine()!.ToUpper();
                 if (optionContinue != "S")
