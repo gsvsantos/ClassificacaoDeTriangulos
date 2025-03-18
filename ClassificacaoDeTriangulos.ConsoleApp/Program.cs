@@ -27,7 +27,23 @@
                 bool isAValidTriangle = sideX + sideY > sideZ && sideX + sideZ > sideY && sideY + sideZ > sideX;
 
                 if (isAValidTriangle == true)
+                {
                     Console.WriteLine("\nÉ um triângulo válido.");
+                    string triangleType = "Não classificado";
+
+                    if (sideX == sideX && sideY == sideZ)
+                    {
+                        triangleType = "Equilátero";
+                    }
+                    else if (sideX != sideY && sideY != sideZ && sideX != sideZ)
+                    {
+                        triangleType = "Escaleno";
+                    }
+                    else
+                        triangleType = "Isósceles";
+
+                    Console.WriteLine($"O triângulo é {triangleType}.");
+                }
                 else
                     Console.WriteLine("\nOs valores informados não formam um triâgulo válido");
 
