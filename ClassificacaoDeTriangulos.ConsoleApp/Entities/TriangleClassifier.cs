@@ -1,4 +1,6 @@
-﻿namespace ClassificacaoDeTriangulos.ConsoleApp.Entities
+﻿using System.Threading.Channels;
+
+namespace ClassificacaoDeTriangulos.ConsoleApp.Entities
 {
     public class TriangleClassifier
     {
@@ -18,6 +20,51 @@
             }
             else
                 return "Isósceles";
+        }
+        public static string DrawnTriangleType(int sideX, int sideY, int sideZ)
+        {
+            if (sideX == sideY && sideY == sideZ)
+            {
+                return "                   .+                    \n" +
+                       "                  ::.=                   \n" +
+                       "                 -.  :=                  \n" +
+                       "                -.    .+                 \n" +
+                       "               =.      .+                \n" +
+                       "              =.        .*.              \n" +
+                       "             +            +              \n" +
+                       "            +.             +.            \n" +
+                       "           *.               +.           \n" +
+                       "         .*                  =.          \n" +
+                       "        .*                    =.         \n" +
+                       "        ::::::::::::::::::::::::           ";
+            }
+            else if (sideX != sideY && sideY != sideZ && sideX != sideZ)
+            {
+                return "                     +=                  \n" +
+                       "                   .=  *                 \n" +
+                       "                  +.    :=               \n" +
+                       "                :=        *.             \n" +
+                       "              .=.          :=            \n" +
+                       "             :=              =.          \n" +
+                       "            *.                .=         \n" +
+                       "          :=                    +.       \n" +
+                       "        .*.                      .=      \n" +
+                       "       :::::::::::::::::::::::::::::      ";
+            }
+            else
+            {
+                return "              .+.                        \n" +
+                       "              = .-=                      \n" +
+                       "             +.    .+.                   \n" +
+                       "            +.       .-+                 \n" +
+                       "           -:           .#:              \n" +
+                       "          .:               -=.           \n" +
+                       "         .-                  .+:         \n" +
+                       "        .+                      :+.      \n" +
+                       "       .+                         .=-    \n" +
+                       "       =                             .*. \n" +
+                       "      .::::::::::::::::::::::::::::::::::  ";
+            }
         }
     }
 }

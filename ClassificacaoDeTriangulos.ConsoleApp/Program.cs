@@ -20,6 +20,7 @@ internal class Program
                 string triangleType = TriangleClassifier.FindTriangleType(sideX, sideY, sideZ);
 
                 Console.WriteLine($"O triângulo é {triangleType}.");
+                Console.WriteLine(TriangleClassifier.DrawnTriangleType(sideX, sideY, sideZ));
             }
             else
                 Console.WriteLine("\nOs valores informados não formam um triâgulo válido");
